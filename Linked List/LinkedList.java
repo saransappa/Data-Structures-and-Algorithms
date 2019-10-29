@@ -139,11 +139,16 @@ public class LinkedList {
 		}
 	}
 	public void middleElementSingleIteration() {
+		Node prev=head;
 		Node slow=head;
 		Node fast=head;
 		while(fast!=null && fast.next!=null  ) {
+			prev=slow;
 			slow=slow.next;
 			fast=fast.next.next;
+		}
+		if(fast==null){
+			System.out.println("The middle element is: "+prev.data);
 		}
 		System.out.println("The middle element is: "+slow.data);
 	}
