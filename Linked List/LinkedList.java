@@ -147,7 +147,7 @@ public class LinkedList {
 			slow=slow.next;
 			fast=fast.next.next;
 		}
-		if(fast==null){
+		if(fast==null){ // Works in case of even sized linked list
 			System.out.println("The middle element is: "+prev.data);
 		}
 		System.out.println("The middle element is: "+slow.data);
